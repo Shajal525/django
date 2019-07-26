@@ -1,0 +1,20 @@
+<h1>Count!</h1>
+
+Number of words:
+{{ count }}
+<br /><br />
+
+<a href="{% url 'home' %}"><input type="button" value="Back" /></a>
+<br /><br />
+
+Your text:<br />
+{{ fulltext }} <br /> <br />
+
+
+Frequency:<br />
+{{ wordsdictionary }}<br /><br />
+
+{% for word, countword in wordsdictionary %}
+	{{ word }}  -  {{ countword }} <br />
+
+{% endfor %}
